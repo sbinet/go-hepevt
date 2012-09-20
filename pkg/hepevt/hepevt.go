@@ -2,16 +2,17 @@
 package hepevt
 
 /*
- #cgo LDFLAGS: -lc-hepevt -lf-hepevt -lgfortran
-
- #include "c-hepevt/hepevt.h"
+ #include "c-hepevt.h"
 
  #include <stdio.h>
  #include <stdlib.h>
 */
 import "C"
-import "os"
-import "unsafe"
+
+import (
+	"os"
+	"unsafe"
+)
 
 // write information from HEPEVT common block
 func PrintHepevt(f *os.File) {

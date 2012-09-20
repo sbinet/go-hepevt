@@ -6,7 +6,6 @@ package hepevt
 import "C"
 
 import (
-	"os"
 	"fmt"
 )
 
@@ -54,7 +53,7 @@ type Event struct {
 }
 
 type Encoder interface {
-	Encode(v interface{}) os.Error
+	Encode(v interface{}) error
 }
 
 // the global event, mapped onto the HEPEVT common block
